@@ -1,3 +1,0 @@
-package mathlib
-
-func main() {}

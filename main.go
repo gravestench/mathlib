@@ -1,3 +1,3 @@
-package mathlib
+package main
 
 func main() {}

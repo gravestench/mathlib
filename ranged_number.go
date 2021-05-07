@@ -1,4 +1,4 @@
-package main
+package mathlib
 
 import "fmt"
 

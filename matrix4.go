@@ -138,8 +138,6 @@ func (m *Matrix4) Transform(position, scale Vector3Like, rotation *Quaternion) *
 
 // SetXYZ sets the x, y, z values of this matrix
 func (m *Matrix4) SetXYZ(x, y, z float64) *Matrix4 {
-	m.Identity()
-
 	m.Values[12] = x
 	m.Values[13] = y
 	m.Values[14] = z
@@ -149,8 +147,6 @@ func (m *Matrix4) SetXYZ(x, y, z float64) *Matrix4 {
 
 // SetScaling sets the scaling values of this Matrix.
 func (m *Matrix4) SetScaling(x, y, z float64) *Matrix4 {
-	m.Zero()
-
 	m.Values[0] = x
 	m.Values[5] = y
 	m.Values[10] = z
@@ -741,7 +737,6 @@ func (m *Matrix4) LookAt(eye, target, up *Vector3) *Matrix4 {
 
 // SetYawPitchRoll sets the values of this matrix from the given `yaw`, `pitch` and `roll` values.
 func (m *Matrix4) SetYawPitchRoll(y, p, r float64) *Matrix4 {
-	m.Zero()
 	a, b := m.Clone(), m.Clone()
 	vm, va, vb := m.Values, a.Values, b.Values
 
